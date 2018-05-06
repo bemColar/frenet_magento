@@ -16,26 +16,12 @@
         <carriers  translate="label" module="akhilleus">
             <groups>
                 <akhilleus translate="label">
-                    <label>Frenet - Gateway de fretes</label>
+                    <label>Chuck Norris - Gateway de Fretes</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>0</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <comment>
-                        <![CDATA[ <div style="background: #FFF; border: 1px solid #0091DB;">
-                        <div style="padding:10px;float: left;text-align: left; vertical-align:bottom;">
-                        <a href="http://www.frenet.com.br" target="_blank">
-                        <img src="https://painel.frenet.com.br/Content/images/Frenet_logo_painel.png" style="float: left;" />
-                        </a>
-                        <b>
-                        Para configurar as transportadoras as quais deseja obter cotações de frete, obter usuário e senha de acesso,
-                        cadastrar regras de frete, acesse o <a href="https://painel.frenet.com.br" target="_blank">painel administrativo Frenet</a>
-                        </div>
-                        </b>
-                        <div class="clear"></div>
-                        </div> ]]>
-                    </comment>
                     <model>akhilleus/carrier_akhilleus</model>
                     <fields>
                         <active translate="label">
