@@ -53,17 +53,6 @@
                 </connection>
             </akhilleus_setup>
         </resources>
-        <events>
-            <sales_order_shipment_save_after>
-                <observers>
-                    <send_statistics>
-                        <type>singleton</type>
-                        <class>LithiumSoftware_Akhilleus_Model_Observer</class>
-                        <method>SaveShippingResultLog</method>
-                    </send_statistics>
-                </observers>
-            </sales_order_shipment_save_after>
-        </events>
     </global>
     <default>
         <carriers>
