@@ -136,7 +136,7 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
 
                 // Pega as maiores dimensões dos produtos do carrinho
                 foreach($request->getAllItems() as $item){
-                    $this->_log('SKU: ' . $item->getSku());
+                    $this->_log('---------------->SKU: ' . $item->getSku());
                     if($item->getProduct()->getData('volume_comprimento') > $this->_length)
                         $this->_length = $item->getProduct()->getData('volume_comprimento');
 
