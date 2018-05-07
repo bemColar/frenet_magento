@@ -178,7 +178,7 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
                 $shippingItem->Diameter = 0;
                 $shippingItem->SKU = $productObj->getSku();
                 //grava sku no log
-                Mage::log('SKU DO OBJETO: ' . $shippingItem->SKU);
+                Mage::log('SKU DO OBJETO: ' . $productObj);
                 $categoryIds = $productObj->getCategoryIds();
                 $result = '';
 
