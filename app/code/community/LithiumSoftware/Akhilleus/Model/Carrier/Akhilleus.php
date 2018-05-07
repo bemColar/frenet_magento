@@ -154,6 +154,9 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
             $count = 0;
             $this->getSimpleProducts($request->getAllItems());
             $productsCount = count ($this->_simpleProducts);
+            //-------------------------------------------------------------------------> LOG
+            $produtoItem = $request->getAllItems();
+            //-------------------------------------------------------------------------> LOG
             $j = 0;
             for ($i = 0; $i < $productsCount; $i ++)
             {
@@ -178,9 +181,7 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
                 $shippingItem->Diameter = 0;
                 $shippingItem->SKU = $productObj->getSku();   
                 //-------------------------------------------------------------------------> LOG
-                foreach($request->getAllItems() as $item){
-                    $this->_log('-----------> SKU: ' . $item->getSku());
-                }
+                $this->_log('-----------> SKU: ' . $produtoItem[$i]->getSku());
                 //-------------------------------------------------------------------------> LOG
                 $categoryIds = $productObj->getCategoryIds();
                 $result = '';
