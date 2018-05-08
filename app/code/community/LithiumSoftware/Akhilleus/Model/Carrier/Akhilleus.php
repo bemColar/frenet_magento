@@ -180,6 +180,7 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
                 $shippingItem->Diameter = 0;
                 //$shippingItem->SKU = $productObj->getSku(); Alterado para pegar o SKU do produto customizável
                 $shippingItem->SKU = $produtoCustomizavel[$i]->getSku();
+                $this->_log('------------------------------> SKU: ' . $shippingItem->SKU);
                 $categoryIds = $productObj->getCategoryIds();
                 $result = '';
 
