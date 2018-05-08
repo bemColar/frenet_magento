@@ -153,10 +153,9 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
             $shippingItemArray = array();
             $count = 0;
             $this->getSimpleProducts($request->getAllItems());
+            //--------> Alteração bemColar
+            $produtoCustomizavel = $request->getAllItems();
             $productsCount = count ($this->_simpleProducts);
-            //-------------------------------------------------------------------------> LOG
-            $produtoItem = $request->getAllItems();
-            //-------------------------------------------------------------------------> LOG
             $j = 0;
             for ($i = 0; $i < $productsCount; $i ++)
             {
@@ -179,10 +178,8 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
                     $shippingItem->Width = ($productObj->getVolume_largura()>0 ? $productObj->getVolume_largura() : $this->getConfigData('default_width'));
                 }
                 $shippingItem->Diameter = 0;
-                $shippingItem->SKU = $productObj->getSku();   
-                //-------------------------------------------------------------------------> LOG
-                $this->_log('-----------> SKU: ' . $produtoItem[$i]->getSku());
-                //-------------------------------------------------------------------------> LOG
+                //$shippingItem->SKU = $productObj->getSku(); Alterado para pegar o SKU do produto customizável
+                $shippingItem->SKU = $produtoCustomizavel[$i]->getSku();
                 $categoryIds = $productObj->getCategoryIds();
                 $result = '';
 
