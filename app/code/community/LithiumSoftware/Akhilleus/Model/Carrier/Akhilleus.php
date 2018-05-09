@@ -507,7 +507,7 @@ class LithiumSoftware_Akhilleus_Model_Carrier_Akhilleus
             break;
         }
 
-        $url    = $this->getConfigData('ws');
+        $url    = $this->getConfigData('url_ws');
         $client = new SoapClient($url, array("soap_version" => SOAP_1_1,"trace" => 1));
         //$orderId = Mage::getModel("sales/order")->getCollection()->getLastItem()->getIncrementId();
         $order = Mage::getModel('sales/order')->load($orderId);
